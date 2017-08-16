@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+	<display-name></display-name>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>WxServlet</servlet-name>
+		<servlet-class>com.zpinfo.wechat.servlet.WxServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<description>This is the description of my J2EE component</description>
+		<display-name>This is the display name of my J2EE component</display-name>
+		<servlet-name>AccessTokenServlet</servlet-name>
+		<servlet-class>com.zpinfo.wechat.servlet.AccessTokenServlet</servlet-class>
+	</servlet>
+
+
+	<servlet-mapping>
+		<servlet-name>WxServlet</servlet-name>
+		<url-pattern>/servlet/WxServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AccessTokenServlet</servlet-name>
+		<url-pattern>/servlet/AccessTokenServlet</url-pattern>
+		<!-- 
+		<init-param>
+			<param-name>appId</param-name>
+			<param-value>wxbe4d433e857e8bb1</param-value>
+			<param-name>appSecret</param-name>
+			<param-value>ccbc82d560876711027b3d43a6f2ebda</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+ 		-->
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>
